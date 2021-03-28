@@ -6,6 +6,7 @@
    - 休眠30秒
    - 输出 bye python
 """
+import time
 from os.path import expanduser
 
 print("hello python!")
