@@ -1,9 +1,14 @@
 """
-  这是一个python示例文件，用于输出hello world, 并休眠20秒，以供用户从squeue查看任务情况
+  Python 小例子
+  主要功能：
+   - 输出 hello python
+   - 创建文件 demo_slurm_python_output.txt 并保存数据
+   - 休眠30秒
+   - 输出 bye python
 """
-import time
 
 print("hello python!")
-print "Start : %s" % time.ctime()
-time.sleep(20)  # 等待20秒
-print "End : %s" % time.ctime()
+with open("~/shared/demo_slurm_python_output.txt", mode="a", encoding="utf8") as f:
+    f.write("I am experiment result. I save it to a file.")
+time.sleep(30)
+print("bye python!")
