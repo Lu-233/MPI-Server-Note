@@ -6,9 +6,10 @@
    - 休眠30秒
    - 输出 bye python
 """
+from os.path import expanduser
 
 print("hello python!")
-with open("~/shared/demo_slurm_python_output.txt", mode="a", encoding="utf8") as f:
+with open(expanduser("~") + "/shared/demo_slurm_python_output.txt", mode="a", encoding="utf8") as f:
     f.write("I am experiment result. I save it to a file.")
 time.sleep(30)
 print("bye python!")
