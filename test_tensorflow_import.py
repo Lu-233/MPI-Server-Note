@@ -14,7 +14,14 @@ def main():
     # print("tf.config.list_physical_devices('GPU')`: ", tf.config.list_physical_devices())
 
     with Timer("Finding visible devices, CPU and GPU", fail_second=20):
-        visible_devices = tf.config.get_visible_devices()
+        try:
+            visible_devices = tf.config.get_visible_devices()
+        except Exception:
+            try:
+                visible_devices = tf.config.experimental.list_physical_devices()
+            except Exception:
+                from tensorflow.python.client import device_lib
+                visible_devices =  [x.name for x in device_lib.list_local_devices()]
         for devices in visible_devices:
             print(devices)
 
