@@ -10,7 +10,8 @@ Lu's Notebooks
    :hidden:
 
    mpi_server/Note1ConnectServer
-   mpi_server/Note2CondaPytorch
+   mpi_server/Note2CondaPyTorch
+   mpi_server/Note3CondaTensorFlow
 
 
 .. toctree::
@@ -23,9 +24,7 @@ Lu's Notebooks
 
 对于 MPI 提供的 GPU 服务器， 我记录了一系列使用笔记。
 
-这可以帮助新用户了解服务器的使用和特性。
-
-相比于 官方文档_ ，本笔记不假设读者有充足的背景知识。
+这可以帮助新用户了解服务器的使用和特性，本笔记不假设读者有充足的背景知识。
 
 当然，如遇冲突请以 官方文档_ 和管理员的解释为准。
 
