@@ -8,8 +8,10 @@ Lu's Notebooks
    :maxdepth: 2
    :caption: Server Note:
    :hidden:
+   :numbered:
+   :glob:
 
-   mpi_server/Note*
+   mpi_server/*
 
 
 .. toctree::

@@ -23,9 +23,11 @@
 
 这么多服务器要怎么用呢？ Slurm 让我们更简单的运行代码和分配资源。
 
-SLURM：是一种可扩展工作负载管理器，被全球超级计算机中心广泛采用。全名是：Simple Linux Utility for Resource Management
-Job/作业：资源设置和程序，用于分配资源和运行。如：“Slurm！来两块显卡，跑这个代码。”
+SLURM：是一种可扩展工作负载管理器，被全球超级计算机中心广泛采用。
 
+全名是：Simple Linux Utility for Resource Management
+
+Job/作业：资源设置和程序，用于分配资源和运行。如：“Slurm！来两块显卡，跑这个代码。”
 
 
 跑代码
@@ -45,7 +47,7 @@ Job/作业：资源设置和程序，用于分配资源和运行。如：“Slur
 
 复制以下命令，在终端运行，这会下载例子文件。
 
-.. codeblock:: bash
+.. code-block:: bash
 
     wget -O ~/shared/hello_slurm.sh https://github.com/Lu-MPI/MPI-Server-Note/raw/main/hello_slurm.sh
     wget -O ~/shared/hello_python.py https://github.com/Lu-MPI/MPI-Server-Note/raw/main/hello_python.py
@@ -62,7 +64,7 @@ Job/作业：资源设置和程序，用于分配资源和运行。如：“Slur
 
 复制以下命令，在终端运行
 
-.. codeblock:: bash
+.. code-block:: bash
 
     cd ~/shared
     sbatch hello_slurm.sh
@@ -108,7 +110,7 @@ slurm 是不是挂了
 .. image:: pics/N4_2sinfo.png
 
 
-我们有两个分区，`speedy`（默认）和 `normal`。
+我们有两个分区， `speedy` （默认）和 `normal` 。
 
 `speedy` 分区一个任务的最长运行时间为6小时，配有两个计算节点：`eureka` 和 `tatooine`。
 `normal` 分区一个任务的最长运行时间为96小时，配有两个计算节点：`eureka` 和 `tatooine`。
@@ -117,11 +119,11 @@ slurm 是不是挂了
 
 每个节点都有自己的状态：
 
-- idle(空载)
-- mix(部分资源可用）
-- alloc(满载)
-- drain(故障)
-- down(下线)
+- `idle` (空载)
+- `mix` (部分资源可用）
+- `alloc` (满载)
+- `drain` (故障)
+- `down` (下线)
 
 如果你认为节点有问题，请告知管理员。
 
@@ -145,7 +147,7 @@ squeueF增加了CPU、GPU的使用数量，这意味着用户可以在运行前�
 
 如果你没有squeueF，可以运行
 
-.. codeblock:: bash
+.. code-block:: bash
 
     squeue --Format "JobID:6,Partition:8,Name:16,UserName:8,StateCompact:2,TimeUsed:9,NumCPUs:3,tres-per-node:10,ReasonList"
 
@@ -157,7 +159,7 @@ squeueF增加了CPU、GPU的使用数量，这意味着用户可以在运行前�
 
 运行以下命令，注意替换 “你的作业编号”
 
-.. codeblock:: bash
+.. code-block:: bash
 
     srun --pty --jobid 你的作业编号 bash -i
 
