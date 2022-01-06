@@ -1,16 +1,16 @@
 .. Lu documentation master file, created by sphinx-quickstart on Wed Jan 5 11:55:17 2022.
 
 =========================
-Welcome to Lu's Notebooks
+Lu's Notebooks
 =========================
 
 .. toctree::
    :maxdepth: 2
-   :caption: GPU Server Note:
+   :caption: Server Note:
    :hidden:
 
-   mpi_server/plan
    mpi_server/Note1ConnectServer
+   mpi_server/Note2CondaPytorch
 
 
 .. toctree::
@@ -20,10 +20,6 @@ Welcome to Lu's Notebooks
 
    other_note/note
 
-
----------------
-GPU Server Note
----------------
 
 对于 MPI 提供的 GPU 服务器， 我记录了一系列使用笔记。
 

@@ -9,14 +9,18 @@
 TLDR： Windows Terminal + RaiDrive。 或者用国产的 FinalShell。
 
 
--------------------------------
-用 ``Windows Terminal`` 连接服务器
--------------------------------
+----------------------------
+用 Windows Terminal 连接服务器
+----------------------------
 
 前提检查
 =======
 
-你需要一个服务器账号，这可以通过管理员注册。如果你没有注册，需要先准备一个SSH key，
+你需要一个服务器账号，这需要向管理员申请。
+
+注意：由于集群正在升级（22年1月），已经暂停申请。此后账号的申请方式可能会发生变化。
+
+如果你没有注册，需要先准备一个SSH key，
 这可以通过PuTTYgen生成，请参阅官方文档账号注册的部分。
 
 （官方文档指向了 这个链接_ ）
@@ -80,7 +84,7 @@ Terminal 需要*.pem格式的私钥。
 
 如图所示：
 
-.. image:: pics/建立连接.png
+.. image:: pics/N1建立连接.png
 
 至此，我们成功访问服务器了。
 
@@ -98,9 +102,9 @@ RaiDrive：https://www.raidrive.com/
 最终结果如图所示，服务器上的目录被我们映射成为一个硬盘，方便的操作文件。
 
 
-.. image:: pics/上传下载文件1.png
+.. image:: pics/N1上传下载文件1.png
 
-.. image:: pics/上传下载文件2.png
+.. image:: pics/N1上传下载文件2.png
 
 
 
@@ -113,7 +117,7 @@ RaiDrive：https://www.raidrive.com/
 
 可以按下图进行配置。
 
-.. image:: pics/安装和配置.png
+.. image:: pics/N1安装和配置.png
 
 在 ``4`` ，要选择映射的目标硬盘盘符，可以选择你喜欢的（除了C）。
 
@@ -175,7 +179,7 @@ SSH工具中的瑞士军刀，国产。
 
 如果购买高级版或专业版，有更高级的特性（我买了挺香的），参见官方文档。
 
-.. image:: pics/FinalShell.jpg
+.. image:: pics/N1FinalShell.jpg
 
 XShell + XFTP
 =============
@@ -184,7 +188,7 @@ XShell + XFTP
 
 经典强大的工具（虽然有过后门事件）
 
-.. image:: pics/XShell.gif
+.. image:: pics/N1XShell.gif
 
 SSHFS-Win Manager
 =================
