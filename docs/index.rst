@@ -9,9 +9,7 @@ Lu's Notebooks
    :caption: Server Note:
    :hidden:
 
-   mpi_server/Note1ConnectServer
-   mpi_server/Note2CondaPyTorch
-   mpi_server/Note3CondaTensorFlow
+   mpi_server/Note*
 
 
 .. toctree::
