@@ -4,10 +4,20 @@
 Lu's Notebooks
 =========================
 
+
+一系列对于 MPI 服务器使用的笔记，我不假设读者有充足的背景知识。
+
+当然，如遇冲突请以 官方文档_ 和管理员的解释为准。
+
+欢迎反馈_ 。
+
+.. _官方文档: https://github.com/gqqnbig/mpi-servers/wiki
+.. _欢迎反馈 : https://github.com/Lu-MPI/MPI-Server-Note/issues
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Server Note:
-   :hidden:
    :numbered:
    :glob:
 
@@ -17,15 +27,5 @@ Lu's Notebooks
 .. toctree::
    :maxdepth: 2
    :caption: Other Note:
-   :hidden:
 
    other_note/note
-
-
-对于 MPI 提供的 GPU 服务器， 我记录了一系列使用笔记。
-
-这可以帮助新用户了解服务器的使用和特性，本笔记不假设读者有充足的背景知识。
-
-当然，如遇冲突请以 官方文档_ 和管理员的解释为准。
-
-.. _官方文档: https://github.com/gqqnbig/mpi-servers/wiki
