@@ -4,17 +4,15 @@
 Lu's Notebooks
 =========================
 
-
-一系列对于 MPI 服务器使用的笔记，我不假设读者有充足的背景知识。
+服务器的使用笔记，不假设读者有充足的背景知识。
 
 欢迎反馈_ 。
 
 .. note::
 
-    服务器集群维护升级中，不保证可用性。
+    近期集群维护升级，不保证可用性。
 
     最后请以 官方文档_ 及其解释为准。
-
 
 .. _官方文档: https://github.com/gqqnbig/mpi-servers/wiki
 .. _欢迎反馈 : https://github.com/Lu-MPI/MPI-Server-Note/issues
