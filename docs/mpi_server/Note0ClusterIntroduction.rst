@@ -26,13 +26,17 @@
 
 用户可以通过 `SSH` 访问集群的登录节点，并提交计算任务。
 
+用户目录下的 ~/shared 文件夹通过存储节点的NFS在所有节点同步。
+
+因此想要在其他节点运行程序，最好将所有的文件放在 shared 文件夹中。
+
 集群使用 Slurm_ 管理集群的任务调度和资源分配。
 
 .. _Slurm: https://slurm.schedmd.com/documentation.html
 
-每台服务器都有自己的名字，都来自于 星球大战中行星的名字_
+每台服务器都有自己的名字，都来自于 星球大战中的行星_
 
-.. _星球大战中行星的名字: https://en.wikipedia.org/wiki/List_of_Star_Wars_planets_and_moons
+.. _星球大战中的行星: https://en.wikipedia.org/wiki/List_of_Star_Wars_planets_and_moons
 
 `Aha`: 登录节点，存储节点。
 
@@ -49,10 +53,8 @@
 `Dagobah`: 计算节点，**寒假后上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
 
-名词解释
+名词简介
 ============
-
-更严谨专业的解释请参见 Wikipedia。
 
 `SSH`
     Secure Shell 可以安全的连接和使用另一个系统的 Shell， 常用于 Linux 。

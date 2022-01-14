@@ -22,7 +22,7 @@ copyright = '2022, Lu'
 author = 'Lu'
 
 # The full version, including alpha/beta/rc tags
-release = '0.11dev'
+release = '0.2'
 
 
 # -- General configuration ---------------------------------------------------
