@@ -2,40 +2,32 @@
 
 .. image:: https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.CondaNote
 
-Conda 笔记
-=============
-
 .. image:: https://docs.conda.io/en/latest/_images/conda_logo.svg
 
 Package, dependency and environment management for any language—Python, R, Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN, and more.
 
 
+Conda 笔记
+=============
+
 Conda是一个软件包和环境管理系统，易用，开源，跨平台。
 
-我主要使用Conda来管理Python环境和配置CUDA。
+我主要使用 Conda 来管理 Python 环境，配置 CUDA 。
 
-当然，pip + 手动CUDA 也可以但没必要，麻烦，我懒。
+当然，pip + 手装 CUDA 也可以但麻烦。
 
-了解更多细节请阅读官方文档：https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html
+    更多细节请阅读官方文档：https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/index.html
 
 基础命令
 -----------
 
-安装
+安装、升级、卸载
 
 .. code-block:: bash
 
     conda install 某某某
 
-升级
-
-.. code-block:: bash
-
     conda update 某某某
-
-卸载
-
-.. code-block:: bash
 
     conda remove 某某某
 
@@ -56,6 +48,7 @@ Conda是一个软件包和环境管理系统，易用，开源，跨平台。
     conda install 张三 李四=2.0 王五
 
     # 从指定频道安装
+    conda install 某某某 -c 指定频道
     conda install 某某某 -c conda-forge
     conda install 某某某 -c pytorch
 
