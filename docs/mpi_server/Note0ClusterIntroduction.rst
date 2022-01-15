@@ -65,11 +65,11 @@ GPU 支持 Nvidia CUDA，可以数十倍的加速机器学习模型。
 
 `Coruscant`: 计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-`Synology`: 存储节点，**寒假后上线**。
+.. `Synology`: 存储节点，**寒假后上线**。
 
-`Naboo`: 计算节点，**寒假后上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+.. `Naboo`: 计算节点，**寒假后上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-`Dagobah`: 计算节点，**寒假后上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+.. `Dagobah`: 计算节点，**寒假后上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
 
 名词简介
