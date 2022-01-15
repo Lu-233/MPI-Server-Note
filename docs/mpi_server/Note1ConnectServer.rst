@@ -16,17 +16,14 @@ TLDR： Windows Terminal + RaiDrive。 或者用国产的 FinalShell。
 前提检查
 =======
 
-你需要一个服务器账号，这需要向管理员申请。
+你需要一个账号，这需要向管理员咨询和申请。
 
-注意：由于集群正在升级（22年1月），已经暂停申请。此后账号的申请方式可能会发生变化。
-
-如果你没有注册，需要先准备一个SSH key，
+如果你没有注册，需要先准备一个专用 SSH key，
 这可以通过PuTTYgen生成，请参阅官方文档账号注册的部分。
 
 （官方文档指向了 这个链接_ ）
 
 .. _这个链接: https://cloud.google.com/compute/docs/connect/create-ssh-keys#windows
-
 
 Terminal 需要*.pem格式的私钥。
 
@@ -53,7 +50,16 @@ Terminal 需要*.pem格式的私钥。
 
 打开设置（标签页下三角>设置; 或者用快捷键 ``Ctrl+逗号`` ）。
 
-设置是一个json文件，在约32行，“list”处，向其添加一组配置：
+目前，Terminal的添加配置支持GUI，可以按引导添加，注意在命令行处添加
+
+.. code-block:: bash
+
+    ssh -i C:/path/your_ssh_key username@aha.ipm.edu.mo
+
+其中 `C:/path/your_ssh_key` 是你SSH私钥文件的位置， `username` 是你的用户名
+
+你也可以修改设置的Json文件来添加新连接。
+打开设置的json文件，在约32行，“list”处，向其添加一组配置：
 
 .. code-block:: json
 
