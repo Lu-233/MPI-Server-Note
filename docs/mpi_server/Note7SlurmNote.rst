@@ -2,22 +2,22 @@
 
 .. image:: https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.SlurmNote
 
-Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.
+
 
 .. image:: https://slurm.schedmd.com/slurm_logo.png
     :width: 200 px
 
+Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.
+
+
 Slurm 笔记
 =============
 
-要运行代码，需要向集群提交计算任务（job）。
+要运行代码，需要向集群提交任务（job）。任务 = 代码 + 资源要求。
 
-计算任务 = 代码 + 资源要求
-
-集群通过Slurm接受和管理任务。因此要使用集群，就要用Slurm。
+集群通过Slurm管理任务。因此用户要使用集群，就要用Slurm。
 
 目前集群使用的Slurm版本是19.05.5，文档：https://slurm.schedmd.com/archive/slurm-19.05.5/
-
 
 常用命令：
 
@@ -184,55 +184,3 @@ sbatch
 
     # 运行代码文件
     python3 hello_python.py
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
