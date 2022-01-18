@@ -25,12 +25,26 @@ Conda是一个软件包和环境管理系统，易用，开源，跨平台。
 
 .. code-block:: bash
 
-    conda install 某某某
+    conda install 张三
 
-    conda update 某某某
+    conda update 张三
 
-    conda remove 某某某
+    conda remove 张三
 
+环境管理
+------------
+
+新建、激活、列表、移除
+
+.. code-block:: bash
+
+    conda create -n 名字
+
+    conda activate 名字
+
+    conda env list
+
+    conda env remove -n 名字
 
 加点细节
 ------------
@@ -39,25 +53,21 @@ Conda是一个软件包和环境管理系统，易用，开源，跨平台。
 
 .. code-block:: bash
 
-    conda install 某某某
+    conda install 张三
 
-    # 指定版本
-    conda install 某某某=版本
+    conda install 张三=版本
 
-    # 安装多个包
     conda install 张三 李四=2.0 王五
 
-    # 从指定频道安装
-    conda install 某某某 -c 指定频道
-    conda install 某某某 -c conda-forge
-    conda install 某某某 -c pytorch
+    conda install 张三 -c 指定频道
+    conda install 张三 -c conda-forge
 
 升级 update
 
 .. code-block:: bash
 
-    conda update 某某某
-    conda update 某某某=版本
+    conda update 张三
+    conda update 张三=版本
 
     # 升级所有包
     conda update --all
@@ -66,10 +76,9 @@ Conda是一个软件包和环境管理系统，易用，开源，跨平台。
 
 .. code-block:: bash
 
-    conda remove 某某某
+    conda remove 张三
 
-    # 按匹配卸载，所有关键字开头的都会被卸载
-    conda remove 某某某*
+    conda remove 张*
 
 搜索 search
 
@@ -81,7 +90,6 @@ Conda是一个软件包和环境管理系统，易用，开源，跨平台。
     conda search scikit-learn
     conda search pillow
 
-
 列出包
 
 .. code-block:: bash
@@ -91,31 +99,3 @@ Conda是一个软件包和环境管理系统，易用，开源，跨平台。
 
     # 列出带有 某某 的包
     conda list 某某
-
-环境管理
-------------
-
-新建环境
-
-.. code-block:: bash
-
-    conda create -n 名字
-
-激活环境
-
-.. code-block:: bash
-
-    conda activate 名字
-
-列出所有环境
-
-.. code-block:: bash
-
-    conda env list
-
-移除环境
-
-.. code-block:: bash
-
-    conda env remove -n 名字
-

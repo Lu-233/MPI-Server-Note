@@ -39,6 +39,16 @@ Server Note:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Tools Note:
+   :numbered:
+   :hidden:
+   :glob:
+
+   tool_note/*
+
+
+.. toctree::
+   :maxdepth: 2
    :caption: Other Note:
    :numbered:
    :hidden:
