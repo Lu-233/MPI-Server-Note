@@ -52,5 +52,6 @@ Server Note:
    :caption: Other Note:
    :numbered:
    :hidden:
+   :glob:
 
-   other_note/note
+   other_note/*
