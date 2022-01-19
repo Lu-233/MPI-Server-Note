@@ -1,20 +1,20 @@
 .. note: how to connect to mpi server
 
-=======
+===========
 连服务器
-=======
+===========
 
 .. image:: https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.连服务器
 
 TLDR： Windows Terminal + RaiDrive。 或者用国产的 FinalShell。
 
 
-----------------------------
+--------------------------------
 用 Windows Terminal 连接服务器
-----------------------------
+--------------------------------
 
 前提检查
-=======
+==========
 
 你需要一个账号，这需要向管理员咨询和申请。
 
@@ -34,7 +34,7 @@ Terminal 需要*.pem格式的私钥。
 
 
 安装软件
-=======
+==========
 
 在Windows应用商店就能安装它，点击这里_ 打开应用商店。这可能需要你有微软账号。
 
@@ -46,7 +46,7 @@ Terminal 需要*.pem格式的私钥。
 
 
 配置 Terminal
-=============
+================
 
 打开设置（标签页下三角>设置; 或者用快捷键 ``Ctrl+逗号`` ）。
 
@@ -86,7 +86,7 @@ Terminal 需要*.pem格式的私钥。
 
 
 建立连接
-=======
+==========
 
 如图所示：
 
@@ -97,9 +97,9 @@ Terminal 需要*.pem格式的私钥。
 你可以输入命令 ``hostname`` ，服务器会输出名字 ``aha``。
 
 
-----------
+-------------
 上传下载文件
-----------
+-------------
 
 我用 RaiDrive 将服务器映射为硬盘。
 
@@ -115,7 +115,7 @@ RaiDrive：https://www.raidrive.com/
 
 
 安装和配置
-=========
+============
 
 可以在此处下载： https://raidrive.en.uptodown.com/windows/download
 
@@ -137,7 +137,7 @@ RaiDrive：https://www.raidrive.com/
 
 
 安装和配置
----------
+---------------
 
 RaiDrive 会开启多个SSH连接，这可能造成你的SSH连接数量超过服务器限制。
 
@@ -151,21 +151,21 @@ RaiDrive 会开启多个SSH连接，这可能造成你的SSH连接数量超过�
 
 
 教育版 RaiDrive
---------------
+--------------------
 
 可以用EDU邮箱注册并申请，教育版增加了：Multi-user File Lock 和 Fast Copy, Move, Delete
 
 地址：https://www.raidrive.com/plans/education
 
 
-----------
+----------------
 同类工具推荐
-----------
+----------------
 
 通过调研、试用可以选择最适合你的工具。
 
 FinalShell
-==========
+=============
 
 官方文档： https://www.hostbuf.com/t/988.html
 
@@ -188,7 +188,7 @@ SSH工具中的瑞士军刀，国产。
 .. image:: pics/N1FinalShell.jpg
 
 XShell + XFTP
-=============
+================
 
 对家庭和教育免费，申请地址：https://www.netsarang.com/zh/free-for-home-school/
 
@@ -197,6 +197,6 @@ XShell + XFTP
 .. image:: pics/N1XShell.gif
 
 SSHFS-Win Manager
-=================
+====================
 
 相比于 RaiDrive，它更省SSH链接数。但性能不如 RaiDrive。
