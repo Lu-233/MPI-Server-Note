@@ -156,6 +156,7 @@ sbatch
 脚本示例
 
 .. code-block:: bash
+
     #!/bin/bash
 
     # 注意，井号和SBATCH之间不能有空格
