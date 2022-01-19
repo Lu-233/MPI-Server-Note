@@ -6,14 +6,13 @@
 
 ## 背景
 
-集群提供了若干服务器，用于科学计算。
+集群提供了若干台服务器，用于科学计算。
 
 用户可以访问集群的登录节点来提交计算任务。
 
-每台服务器都有自己的名字，都来自于[星球大战中的行星]。
+每台服务器都有自己的名字，来自[星球大战中的行星]。
 
 [星球大战中的行星]: https://en.wikipedia.org/wiki/List_of_Star_Wars_planets_and_moons
-
 
 ## 集群
 
@@ -21,12 +20,13 @@
 
 ### 登录节点
 
-用户可以通过 `SSH` 访问集群的登录节点，并提交计算任务。
+用户可以通过 [SSH] 访问集群的登录节点，并提交计算任务。
 
 多个任务会构成优先队列，按顺序分配资源和执行，资源不足的任务将会等待。
 
 集群使用 [Slurm] 管理集群的任务调度和资源分配。
 
+[SSH]: https://en.wikipedia.org/wiki/Secure_Shell
 [Slurm]: https://slurm.schedmd.com/documentation.html
 
 ### 计算节点
@@ -45,41 +45,42 @@ GPU 支持 Nvidia CUDA，可以数十倍的加速机器学习模型。
 
 ### 节点列表：
 
-`Aha`: 登录节点，存储节点。
+**Aha**：登录节点，存储节点。
 
-`Eureka`: 计算节点，**维护中**，CPU 48核，Memory 128G，GPU 10个（RTX2080Ti，12G）
+**Eureka**：计算节点，**维护中**，CPU 48核，Memory 128G，GPU 10个（RTX2080Ti，12G）
 
-`Tatooine`: 计算节点，CPU 20核，Memory 128G，GPU 4个（RTX3070，8G）
+**Tatooine**：计算节点，CPU 20核，Memory 128G，GPU 4个（RTX3070，8G）
 
-`Coruscant`: 计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+**Coruscant**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-`Synology`: 存储节点，**等待上线**。
+**Synology**：存储节点，**等待上线**。
 
-`Naboo`: 计算节点，**等待上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+**Naboo**：计算节点，**等待上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-`Dagobah`: 计算节点，**等待上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+**Dagobah**：计算节点，**等待上线**，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-## 名词简介
+## 简介
 
-`SSH`：
+**SSH**：
 
-Secure Shell 可以安全的连接和使用另一个系统的 Shell， 常用于 Linux 。
+> Secure Shell 可以安全的连接和使用另一个系统的 Shell， 常用于 Linux 。 
 
-外壳（Shell）是与内核（Kernel）相对的概念。
+> 外壳（Shell）是与内核（Kernel）相对的概念。
 
-用户通过外壳使用内核。具体的说，它是命令行（CLI，Command-line interface）或图形界面（GUI）。
+> 用户通过外壳使用内核。具体的说，它是命令行（CLI，Command-line interface）或图形界面（GUI, Graphical user interface）。
 
-`Bash`
+**Bash**：
 
-当你登录到服务器，会显示一个美元符号 $ 等待你输入命令。
-这就是Bash，一种常用的Linux Shell，以 CLI（Command-line interface） 的形式提供。
+> 当你登录到服务器，会显示一个美元符号 $ 等待你输入命令。
 
-为了节省资源，服务器通常只提供某种CLI，如Bash、Zsh，而不提供GUI。
+> 这就是Bash，一种常用的Linux Shell，以 CLI（Command-line interface） 的形式提供。
 
-`Slurm`
+> 为了节省资源，服务器通常只提供某种CLI，如Bash、Zsh，而不提供GUI。
 
-一个集群管理和作业调度系统，它管理多个服务器节点的资源。
+**Slurm**：
 
-可以供多个用户提交计算任务，每个任务都要说明需要的资源。
+> 一个集群管理和作业调度系统，它管理多个服务器节点的资源。
 
-Slurm 通过优先队列为任务分配资源，并在被分配的节点上启动、执行和监控任务的执行。
+> 可以供多个用户提交计算任务，每个任务都要说明需要的资源。
+
+> Slurm 通过优先队列为任务分配资源，并在被分配的节点上启动、执行和监控任务的执行。
