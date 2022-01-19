@@ -16,7 +16,6 @@
 
 登录服务器后，复制以下命令，查看 .bash.aliases 文件权限。
 
-.. code-block:: bash
 ```shell
 ls -l ~/.bash_aliases
 ```
