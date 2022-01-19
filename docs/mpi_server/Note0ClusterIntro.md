@@ -1,4 +1,4 @@
-# 集群简介和名词解释 (md)
+# 集群简介
 
 ![img:访客统计](https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.服务器集群简介)
 
