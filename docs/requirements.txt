@@ -1,1 +1,2 @@
 sphinx>=4.3
+myst_parser
