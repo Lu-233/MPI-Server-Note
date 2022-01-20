@@ -2,7 +2,7 @@
 
 ![img:访客统计](https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.服务器集群简介)
 
-官方的集群简介： https://github.com/gqqnbig/mpi-servers/wiki/集群简介
+官方的集群简介： <https://github.com/gqqnbig/mpi-servers/wiki/集群简介>
 
 ## 背景
 
