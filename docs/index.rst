@@ -4,28 +4,18 @@
 Lu's Notebooks
 ====================
 
+
 .. warning::
-    如果你来自 官方Wiki_，请注意这里是第三方。 官方Wiki_ 提供链接但不做任何背书。
+    如果你来自 **mpi-servers wiki** 的友情链接：注意这里是第三方，官方Wiki_ 不做任何背书。
 
-    内容仅供参考，作者不对笔记内容的准确性、时效性、可访问性等做任何保证。
+    内容用爱发电，仅供参考，随缘更新。欢迎反馈_。
 
-.. _官方Wiki: https://github.com/gqqnbig/mpi-servers/wiki
-
-
-Server Note:
---------------------
-
-服务器使用笔记，不假设读者的背景知识充足，欢迎反馈_。
+.. _官方Wiki : https://github.com/Lu-MPI/MPI-Server-Note/issues
 
 .. _欢迎反馈 : https://github.com/Lu-MPI/MPI-Server-Note/issues
 
-Tools Note:
---------------------
 
-工具笔记，便于日用速查。
-
-
-- 集群文档（偶尔更新）： https://github.com/gqqnbig/mpi-servers/wiki
+- mpi-servers 文档（偶尔更新）： https://github.com/gqqnbig/mpi-servers/wiki
 - Slurm 文档（V19.05.5）： https://slurm.schedmd.com/archive/slurm-19.05.5/
 
 

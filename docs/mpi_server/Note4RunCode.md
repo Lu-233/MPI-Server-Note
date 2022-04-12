@@ -1,4 +1,4 @@
-# 跑代码
+# 跑代码 （Python）
 
 ![](https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.跑代码)
     
@@ -12,9 +12,9 @@
 
 集群提供了多个计算节点，每个节点有多块GPU。
 
-这么多GPU要如何分配和使用呢？ 用 Slurm。
+如何分配使用呢？用Slurm。
 
-SLURM：是一种可扩展工作负载管理器，被全球超级计算机中心广泛采用。
+SLURM：一个集群管理和作业调度系统，被全球超算广泛采用。
 
 Job：任务，资源设置和程序，用于分配资源和运行。如：“Hi~ o(*￣▽￣*)ブ，Slurm！来两块显卡，跑这个代码。”
 

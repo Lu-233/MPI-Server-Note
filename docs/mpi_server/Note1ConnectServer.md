@@ -12,11 +12,11 @@
 你需要一个账号，这需要向管理员咨询和申请。
 
 如果你没有注册，需要先准备一个专用的 SSH key，
-这可以通过软件 `PuTTYgen` 生成。
+这可以通过软件 `PuTTYgen` 生成，也可以在相关网站在线生成。
 
-请参阅：[官方文档-账号注册]。
+请参阅：[create-ssh-keys]。
 
-[官方文档-账号注册]: https://cloud.google.com/compute/docs/connect/create-ssh-keys#windows
+[create-ssh-keys]: https://cloud.google.com/compute/docs/connect/create-ssh-keys#windows
 
 Terminal 需要 `*.pem` 格式的私钥。
 如果你的私钥是其他格式，如ppk，请参阅：[Windows – 将 .ppk 文件转换为 .pem 文件]。
@@ -170,7 +170,7 @@ RaiDrive 会开启多个SSH连接，这可能造成你的SSH连接数量超过�
 
 对家庭和教育免费，需要申请：<https://www.netsarang.com/zh/free-for-home-school/>
 
-经典强大的工具（虽然有过后门事件）
+经典强大的工具
 
 ![](pics/N1XShell.gif)
 
@@ -179,5 +179,7 @@ RaiDrive 会开启多个SSH连接，这可能造成你的SSH连接数量超过�
 Github仓库：<https://github.com/evsar3/sshfs-win-manager>
 
 相比于 RaiDrive，它更省SSH链接数。但性能不如 RaiDrive。
+
+如果你打算在本地IDE中实时编辑服务器上的项目，不要使用它。
 
 ![](pics/N1SSHFS.png)
