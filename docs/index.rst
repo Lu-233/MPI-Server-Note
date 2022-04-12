@@ -6,9 +6,9 @@ Lu's Notebooks
 
 
 .. warning::
-    如果你来自 **mpi-servers wiki** 的友情链接：注意这里是第三方，官方Wiki_ 不做任何背书。
+    如果你来自 **mpi-servers wiki** 的友情链接：注意，这里是第三方，官方Wiki_ 不对本站做任何背书。
 
-    内容用爱发电，仅供参考，随缘更新。欢迎反馈_。
+    用爱发电，仅供参考，随缘更新，欢迎反馈_。
 
 .. _官方Wiki : https://github.com/Lu-MPI/MPI-Server-Note/issues
 
