@@ -4,17 +4,20 @@
 Lu's Notebooks
 ====================
 
+.. note::
+    如果你来自官方Wiki_，请注意这里是第三方。
+
+    官方Wiki_ 提供链接但不对这里的信息做任何背书。
+
+    作者也不对笔记内容的准确性、时效性、可访问性等做任何保证。
+
+.. _官方Wiki: https://github.com/gqqnbig/mpi-servers/wiki
+
+
 Server Note:
 --------------------
 
 服务器使用笔记，不假设读者的背景知识充足，欢迎反馈_。
-
-.. note::
-    近期集群维护升级, 请关注邮件通知。
-
-    最后请以 官方文档_ 及其解释为准。
-
-.. _官方文档: https://github.com/gqqnbig/mpi-servers/wiki
 
 .. _欢迎反馈 : https://github.com/Lu-MPI/MPI-Server-Note/issues
 
