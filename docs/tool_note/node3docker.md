@@ -1,70 +1,70 @@
 
 # config docker
-³£ÓÃµÄÃüÁî²éÑ¯ÍøÖ·£ºhttps://docs.docker.com/engine/reference/commandline/run/
+å¸¸ç”¨çš„å‘½ä»¤æŸ¥è¯¢ç½‘å€ï¼šhttps://docs.docker.com/engine/reference/commandline/run/
 
-##µÚÒ»´ÎÔËĞĞ
+##ç¬¬ä¸€æ¬¡è¿è¡Œ
 loginctl enable-linger $USER
 dockerd-rootless-setuptool.sh install
 
 
-##Ã¿´ÎÔËĞĞ£¨¿ÉÒÔĞ´µ½bashrc£©
+##æ¯æ¬¡è¿è¡Œï¼ˆå¯ä»¥å†™åˆ°bashrcï¼‰
 loginctl enable-linger $USER
 export PATH=???
 export DOCKER_HOST=???
 
 
-##°²×°docker
-À­È¡ubuntu18.04¾µÏñ: docker pull ubuntu:18.04 £¨ÕâÀïÊÇ×îĞ¡»¯µÄÏµÍ³¾µÏñ°ü£©
+##å®‰è£…docker
+æ‹‰å–ubuntu18.04é•œåƒ: docker pull ubuntu:18.04 ï¼ˆè¿™é‡Œæ˜¯æœ€å°åŒ–çš„ç³»ç»Ÿé•œåƒåŒ…ï¼‰
 
-²é¿´¾µÏñÁĞ±í£ºdocker images
+æŸ¥çœ‹é•œåƒåˆ—è¡¨ï¼šdocker images
 
-´´½¨²¢ÔËĞĞÈİÆ÷£¬¼Ì³Ğimage¾µÏñ¡£²¢¹ÒÔØÎÄ¼ş¼ĞÂ·¾¶£º docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+åˆ›å»ºå¹¶è¿è¡Œå®¹å™¨ï¼Œç»§æ‰¿imageé•œåƒã€‚å¹¶æŒ‚è½½æ–‡ä»¶å¤¹è·¯å¾„ï¼š docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 docker run --name TFormer -ti -v /home/wangcui/shared:/shared_disk ubuntu:18.04 /bin/bash
 
 
-ÊµÀı»¯ÈİÆ÷£ºÁ½ÖÖĞ´·¨
+å®ä¾‹åŒ–å®¹å™¨ï¼šä¸¤ç§å†™æ³•
 docker run --name TFormer_new u18.04c:v1
 docker create -i -t --name test u18.04c:v1
 
 
-²é¿´µ±Ç°ÎÄ¼şÂ·¾¶£ºls
+æŸ¥çœ‹å½“å‰æ–‡ä»¶è·¯å¾„ï¼šls
 
-°²×°ÍêÕû°æµÄubuntu
-·Ç×îĞ¡»¯´¦Àí 
+å®‰è£…å®Œæ•´ç‰ˆçš„ubuntu
+éæœ€å°åŒ–å¤„ç† 
     unminimize
     `sudo apt update && sudo apt full-upgrade`
     apt install vim
-    sudo passwd £¨gg£©
+    sudo passwd ï¼ˆggï¼‰
     
-°²×°miniconda3
+å®‰è£…miniconda3
 wget [https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh)
-bash [ÉÏÊöÎÄ¼ş][.sh](http://xxx.sh)
+bash [ä¸Šè¿°æ–‡ä»¶][.sh](http://xxx.sh)
 bash https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-¼¤»î»·¾³£ºsource /opt/anaconda3/bin/activate
-Íê³ÉºóÖØÆôÈİÆ÷
+æ¿€æ´»ç¯å¢ƒï¼šsource /opt/anaconda3/bin/activate
+å®Œæˆåé‡å¯å®¹å™¨
 docker restart TFormer
 
-¾µÏñ´ò°ü docker commit -a ×÷Õß  ÈİÆ÷id ÈİÆ÷Ãû×Ö£ºÈİÆ÷±êÇ©
+é•œåƒæ‰“åŒ… docker commit -a ä½œè€…  å®¹å™¨id å®¹å™¨åå­—ï¼šå®¹å™¨æ ‡ç­¾
 docker commit -a cui -m "complete u18.04" cbe37b45a22c u18.04c:v1
 
 
 
-##dockerµÄ³£ÓÃÃüÁî
+##dockerçš„å¸¸ç”¨å‘½ä»¤
 docker image rm [OPTIONS] IMAGE [IMAGE...]
 
-É¾³ıimage¾µÏñ£ºdocker image rm 5a5c46a1ad43
+åˆ é™¤imageé•œåƒï¼šdocker image rm 5a5c46a1ad43
 
-É¾³ıÈİÆ÷£ºdocker rm [OPTIONS] CONTAINER [CONTAINER...]
+åˆ é™¤å®¹å™¨ï¼šdocker rm [OPTIONS] CONTAINER [CONTAINER...]
 docker rm 9e81183e5ec1
 
-ÔËĞĞÈİÆ÷£ºdocker start TFormer
-½øÈëdockerÇ°Ì¨ docker attach motr
-ÍË³öºóÌ¨ ctrl + p + q
+è¿è¡Œå®¹å™¨ï¼šdocker start TFormer
+è¿›å…¥dockerå‰å° docker attach motr
+é€€å‡ºåå° ctrl + p + q
 
 
 
 
-# ¶ÔÈİÆ÷µÄ²Ù×÷
+# å¯¹å®¹å™¨çš„æ“ä½œ
 docker container start trackformer
 docker container stop trackformer
 docker container exec -it trackformer /bin/bash
@@ -86,11 +86,11 @@ sudo apt-get install build-essential
 source /opt/anaconda3/bin/activate
 
 
-##trackformer »·¾³
+##trackformer ç¯å¢ƒ
 git clone https://github.com/timmeinhardt/trackformer.git
 
-°²×°ĞéÄâ»·¾³£ºconda create -n trackformer
-¼¤»îĞéÄâ»·¾³£ºconda activate trackformer
+å®‰è£…è™šæ‹Ÿç¯å¢ƒï¼šconda create -n trackformer
+æ¿€æ´»è™šæ‹Ÿç¯å¢ƒï¼šconda activate trackformer
 conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
 conda install -c conda-forge gcc
 
