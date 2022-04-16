@@ -3,9 +3,20 @@
 
 
 ## 介绍docker
-原因很简单，普通用户是rootless用户，没有管理员用户的权限。我们安装docker容器rootless，可以在这个
-容器里面拥有docker用户的权限。我自己的经历是运行trackformer论文的代码，实验环境需要安装gcc这个包，
-但是在服务器里面安装不成功，好像是说我是非root权限。因此我总结了一套安装docker的详细教程，手把手安装。
+Docker 是一个用于开发、发布和运行应用程序的开放平台。
+Docker 使您能够将应用程序与基础架构分离，以便您可以快速交付软件。
+使用 Docker，您可以像管理应用程序一样管理基础设施。
+通过利用 Docker 快速交付、测试和部署代码的方法，您可以显着减少编写代码和在生产环境中运行之间的延迟。
+您可以在多个平台上下载和安装 Docker。
+
+
+Docker容器与虚拟机类似，但二者在原理上不同。
+容器是将操作系统层虚拟化，虚拟机则是虚拟化硬件，因此容器更具有便携性、高效地利用服务器。 
+容器更多的用于表示 软件的一个标准化单元。
+由于容器的标准化，因此它可以无视基础设施（Infrastructure）的差异，部署到任何一个地方。
+另外，Docker也为容器提供更强的业界的隔离兼容
+
+
 
 
 ## 服务器上配置docker
@@ -46,33 +57,65 @@ dockerd-rootless-setuptool.sh install
 ## dockers的使用
 
 ### docker(container)的常用命令
-docker常用的命令查询网址：https://docs.docker.com/engine/reference/commandline/run/
+docker常用的命令查询网址: https://docs.docker.com/engine/reference/commandline/run/
 
-查看docker容器的列表
+
+这是一个链接 [docker常用的命令查询网址](https://docs.docker.com/engine/reference/commandline/run/)
+
+
+docker容器的列表: 
 ```shell script
     docker ps -a
 ```
-
-开启dockers容器：docker start container
+example:
 ```shell script
-    docker start TFormer
+    docker ps [OPTIONS]
 ```
 
-重启容器
+开启dockers容器：
 ```shell script
-    docker restart TFormer
+     docker start [OPTIONS] CONTAINER [CONTAINER...]
+```
+example: 开启并且进入容器
+```shell script
+    docker start attach my_container
 ```
 
-进入docker容器，两种写法任选其一
+
+重新开启一个或者多个容器
 ```shell script
+    docker restart [OPTIONS] CONTAINER [CONTAINER...]
+```
+example: 
+```shell script
+    docker restart my_container
+```
+
+
+运行一个命令进入容器
+```shell script
+    docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+example
+进入docker容器，两种写法任选其一。第一行：创建一个新的容器，并叫ubuntu_bash，权限ubuntu bash。第二三行是运动容器的两种写法
+```shell script
+    docker run --name ubuntu_bash --rm -i -t ubuntu bash
     docker attach motr
     docker container exec -it trackformer /bin/bash
 
 ```
 
-停止docker容器(三种方式，任选其一)
+
+停止一个或者多个正在运行的程序
+```shell script
+    docker stop [OPTIONS] CONTAINER [CONTAINER...]
+    
+```
+
+example：停止docker容器(三种方式，任选其一)
 ```shell script
     docker container stop trackformer
+    docker stop my_container
     exit
     ctrl + p + q
     
@@ -80,27 +123,37 @@ docker常用的命令查询网址：https://docs.docker.com/engine/reference/com
 
 创建并运行容器 
 ```shell script
-docker run -dit --name=motr ubuntu:18.04 --gpus all
+    docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 ```
 
+example: 创建容器并继承image镜像的东西, 根据需求可以有N种写法
 ```shell script
-    docker run --name TFormer_new u18.04c:v1
-    docker create -i -t --name test u18.04c:v1
+    docker run -dit --name=my_container ubuntu:18.04 --gpus
+    docker run --name my_container u18.04c:v1
+    docker create -i -t --name my_container u18.04c:v1
 ```
 
 
 
-删除docker容器：docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+删除docker容器：
+```shell script
+    docker rm [OPTIONS] CONTAINER [CONTAINER...]
+```
+
+example，两种写法（container的名称或ID）
 ```shell script
     docker rm 9e81183e5ec1
+    docker rm /redis
 ```
 
 
 
+### 管理镜像的常用命令 镜像(images)的常用命令
 
-
-### 镜像(images)的常用命令
-
+```shell script
+    docker image COMMAND
+```
 
 查看镜像列表：docker images
 ```shell script
@@ -113,7 +166,14 @@ docker run -dit --name=motr ubuntu:18.04 --gpus all
 ```
 
 
-镜像打包： docker commit -a 作者  容器id 容器名字：容器标签
+根据容器container创建一个新的镜像打包：
+ 
+ 
+```shell script
+  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+  docker commit -a 作者  容器id 容器名: 容器标签
+```
+ 
 ```shell script
   docker commit -a cui -m "complete u18.04" cbe37b45a22c u18.04c:v1
 ```
