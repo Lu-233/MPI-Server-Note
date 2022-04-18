@@ -57,9 +57,6 @@ dockerd-rootless-setuptool.sh install
 ## dockers的使用
 
 ### docker(container)的常用命令
-docker常用的命令查询网址: https://docs.docker.com/engine/reference/commandline/run/
-
-
 这是一个链接 [docker常用的命令查询网址](https://docs.docker.com/engine/reference/commandline/run/)
 
 
