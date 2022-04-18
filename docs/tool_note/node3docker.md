@@ -65,102 +65,75 @@ docker常用的命令查询网址: https://docs.docker.com/engine/reference/comm
 
 docker容器的列表: 
 ```shell script
+docker ps [OPTIONS]
     docker ps -a
-```
-example:
-```shell script
-    docker ps [OPTIONS]
 ```
 
 开启dockers容器：
 ```shell script
-     docker start [OPTIONS] CONTAINER [CONTAINER...]
-```
-example: 开启并且进入容器
-```shell script
+docker start [OPTIONS] CONTAINER [CONTAINER...]
     docker start attach my_container
 ```
 
 
+
 重新开启一个或者多个容器
 ```shell script
-    docker restart [OPTIONS] CONTAINER [CONTAINER...]
-```
-example: 
-```shell script
+docker restart [OPTIONS] CONTAINER [CONTAINER...]
     docker restart my_container
 ```
 
 
-运行一个命令进入容器
-```shell script
-    docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
-```
-example
-进入docker容器，两种写法任选其一。第一行：创建一个新的容器，并叫ubuntu_bash，权限ubuntu bash。第二三行是运动容器的两种写法
-```shell script
-    docker run --name ubuntu_bash --rm -i -t ubuntu bash
-    docker attach motr
-    docker container exec -it trackformer /bin/bash
 
+运行一个命令进入容器，运动容器的两种写法
+```shell script
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+    docker container exec -it my_container /bin/bash    
+    docker attach my_container
 ```
 
 
-停止一个或者多个正在运行的程序
+停止一个或者多个正在运行的程序：example：停止docker容器(三种方式，任选其一)
 ```shell script
-    docker stop [OPTIONS] CONTAINER [CONTAINER...]
-    
-```
-
-example：停止docker容器(三种方式，任选其一)
-```shell script
+docker stop [OPTIONS] CONTAINER [CONTAINER...]
     docker container stop trackformer
     docker stop my_container
     exit
     ctrl + p + q
-    
 ```
 
-创建并运行容器 
-```shell script
-    docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-```
 
-example: 创建容器并继承image镜像的东西, 根据需求可以有N种写法
+
+创建并运行容器：创建容器并继承image镜像的东西, 根据需求可以有N种写法,申请gpu
 ```shell script
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
     docker run -dit --name=my_container ubuntu:18.04 --gpus
-    docker run --name my_container u18.04c:v1
-    docker create -i -t --name my_container u18.04c:v1
+    docker run --name my_container u18.04c:v1 --gpus
+    docker create -i -t --name my_container u18.04c:v1 --gpus
+    docker run --name my_container --rm -i -t ubuntu bash --gpus
 ```
 
 
 
-
-删除docker容器：
+删除docker容器：两种写法（container的名称或ID）
 ```shell script
-    docker rm [OPTIONS] CONTAINER [CONTAINER...]
-```
-
-example，两种写法（container的名称或ID）
-```shell script
+docker rm [OPTIONS] CONTAINER [CONTAINER...]
     docker rm 9e81183e5ec1
     docker rm /redis
 ```
 
 
-
 ### 管理镜像的常用命令 镜像(images)的常用命令
-
-```shell script
-    docker image COMMAND
-```
 
 查看镜像列表：docker images
 ```shell script
+docker image COMMAND
     docker images
 ```
 
-拉取ubuntu18.04镜像:  （这里是最小化的系统镜像包）
+
+
+拉取ubuntu18.04镜像: 这里是最小化的系统镜像包
 ```shell script
     docker pull ubuntu:18.04 --gpus all
 ```
@@ -168,18 +141,16 @@ example，两种写法（container的名称或ID）
 
 根据容器container创建一个新的镜像打包：
  
- 
 ```shell script
-  docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
-  docker commit -a 作者  容器id 容器名: 容器标签
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+    docker commit -a 作者  容器id 容器名: 容器标签
+    docker commit -a cui -m "complete u18.04" cbe37b45a22c u18.04c:v1
 ```
  
-```shell script
-  docker commit -a cui -m "complete u18.04" cbe37b45a22c u18.04c:v1
-```
 
-删除image镜像：docker image rm [OPTIONS] IMAGE [IMAGE...]
+删除image镜像：
 ```shell script
+docker image rm [OPTIONS] IMAGE [IMAGE...]
     docker image rm 5a5c46a1ad43
 ```
 
@@ -203,9 +174,10 @@ example，两种写法（container的名称或ID）
 ```
 
 
-创建并运行容器，继承image镜像。并挂载文件夹路径： docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+创建并运行容器，继承image镜像。并挂载文件夹路径： 
 ```shell script
-  docker run --name TFormer -ti -v /home/wangcui/shared:/shared_disk ubuntu:18.04 /bin/bash
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+    docker run --name TFormer -ti -v /home/wangcui/shared:/shared_disk ubuntu:18.04 /bin/bash
 ```
 
     
@@ -224,12 +196,12 @@ example，两种写法（container的名称或ID）
 
 完成后重启容器
 ```shell script
-    docker restart TFormer
+    docker restart my_container
 ```
 
 进入docker容器： docker attach container
 ```shell script
-    docker attach motr
+    docker attach my_container
 ```
 
 
