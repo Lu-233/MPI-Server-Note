@@ -132,7 +132,7 @@ docker image COMMAND
 
 拉取ubuntu18.04镜像: 这里是最小化的系统镜像包
 ```shell script
-    docker pull ubuntu:18.04 --gpus all
+    docker pull ubuntu:18.04
 ```
 
 
@@ -158,48 +158,44 @@ docker image rm [OPTIONS] IMAGE [IMAGE...]
 
 拉取ubuntu18.04镜像:  （这里是最小化的系统镜像包）
 ```shell script
-    docker pull ubuntu:18.04 --gpus all
+    docker pull ubuntu:18.04
+```
+
+创建并运行容器，继承image镜像。并挂载文件夹路径： 
+```shell script
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+    docker run --name yolox_container -ti -v /home/wangcui/shared:/shared_disk --gpus all ubuntu:18.04 /bin/bash 
+
+    docker run --name yolox_container -ti -v /home/wangcui/shared:/shared_disk --gpus all ubuntu:18.04 /bin/bash 
 ```
 
 安装完整版的ubuntu
 非最小化处理 
 ```shell script
     unminimize
-    `sudo apt update && sudo apt full-upgrade`
+    sudo apt update && sudo apt full-upgrade
     apt install vim
     sudo passwd
 ```
 
-
-创建并运行容器，继承image镜像。并挂载文件夹路径： 
-```shell script
-docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-    docker run --name TFormer -ti -v /home/wangcui/shared:/shared_disk ubuntu:18.04 /bin/bash
-```
-
-    
 ## 配置机器学习环境
     miniconda：安装miniconda3,bash [上述文件][.sh](http://xxx.sh)
 ```shell script
-    wget [https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh)
-    bash https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    bash https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
-
-激活环境conda环境：
-```shell script
-    source /opt/miniconda/bin/activate
-```
-
 
 完成后重启容器
 ```shell script
     docker restart my_container
 ```
 
-进入docker容器： docker attach container
+进入到conda安装路径，然后激活环境conda环境：
 ```shell script
-    docker attach my_container
+    source /opt/miniconda/bin/activate
 ```
+
+
 
 
 安装git工具
