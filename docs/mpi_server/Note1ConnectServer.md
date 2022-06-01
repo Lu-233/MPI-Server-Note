@@ -7,9 +7,17 @@
 
 ## 用 Windows Terminal 连接服务器
 
+### 基础要求
+
+需要主动获取信息的能力。这包括：能阅读屏幕上的文字、能通过搜索引擎学习新事物。
+
+如果你是新手或完全没用过Linux，推荐阅读 [提问的智慧]。
+
+[提问的智慧]: https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md
+
 ### 前提检查
 
-你需要一个账号，这需要向管理员咨询和申请。
+你需要有一个账号，这需要向管理员咨询和申请。 如果你不知道如何联系管理员——你可能不是服务器服务的对象。
 
 如果你没有注册，需要先准备一个专用的 SSH key，
 这可以通过软件 `PuTTYgen` 生成，也可以在相关网站在线生成。
@@ -18,14 +26,14 @@
 
 [create-ssh-keys]: https://cloud.google.com/compute/docs/connect/create-ssh-keys#windows
 
-Terminal 需要 `*.pem` 格式的私钥。
+本文推荐的软件 Terminal 需要 `*.pem` 格式的私钥。
 如果你的私钥是其他格式，如ppk，请参阅：[Windows – 将 .ppk 文件转换为 .pem 文件]。
 
 [Windows – 将 .ppk 文件转换为 .pem 文件]: https://aws.amazon.com/cn/premiumsupport/knowledge-center/convert-pem-file-into-ppk/
 
-### 安装软件
+### 安装
 
-在[Windows应用商店]就能安装它。这需要你有微软账号。
+在[Windows应用商店]就能安装它，这需要你有微软账号。
 
 你也可以在 [Terminal 的 Github 发布页] 下载安装包。
 
@@ -33,11 +41,11 @@ Terminal 需要 `*.pem` 格式的私钥。
 
 [Terminal 的 Github 发布页]: https://github.com/microsoft/terminal/releases
 
-### 配置 Terminal
+### 配置
 
 打开设置（标签页下三角>设置; 或者用快捷键 ``Ctrl + ,`` ）。
 
-目前，Terminal的添加配置支持GUI，可以按引导添加，注意在命令行处添加
+目前，Terminal支持使用GUI添加新配置，请按引导添加，注意在命令行处填写
 
 ```shell
 ssh -i C:/path/your_ssh_key username@aha.ipm.edu.mo
@@ -45,29 +53,27 @@ ssh -i C:/path/your_ssh_key username@aha.ipm.edu.mo
 
 其中 `C:/path/your_ssh_key` 是你SSH私钥文件的位置， `username` 是你的用户名
 
-你也可以修改设置的 JSON 文件来添加新连接。
-打开设置的json文件，在约32行，“list” 处，向其添加一组配置：
+你也可以通过修改设置的文件来添加新连接。
+打开设置的json文件，在约32行，profiles > list 处，向其添加一组配置：
 
 ```json
 {
-    "guid": "{a399abee-686e-4f2c-9ff4-18143cb2f0ea}",
-    "hidden": false,
     "name": "Aha",
-    "commandline": "ssh -i C:/path/your_ssh_key username@aha.ipm.edu.mo"
+    "commandline": "ssh -i C:/path/your_ssh_key username@aha.ipm.edu.mo",
+    "guid": "{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}"
 }
 ```
 
 注意：
 
 - guid 是生成的，可以使用 [Online-guid-generator] ,直接点击按钮“Generate some GUIDs!”，就可以在Results中获取一个guid
-- hidden 是否隐藏（可以将不需要显示的配置设置为true）
 - name 配置名称，用于显示
 - commandline ssh命令，需要将其中的“C:/path/your_ssh_key”替换为你的ssh key路径，将username替换为你的用户名
 - 查看 Terminal 的官方文档，可以获取更详细的配置说明
-
+- 如果 aha 不能用，请尝试另一个登陆节点aloha
+- 如果 aha.ipm.edu.mo 不能解析DNS，请尝试用 aha 的IP登录
 
 [Online-guid-generator]: https://www.guidgenerator.com/online-guid-generator.aspx
-
 
 其他的配置选项请参考 [Terminal 的官方文档]。
 
@@ -81,7 +87,7 @@ ssh -i C:/path/your_ssh_key username@aha.ipm.edu.mo
 
 至此，我们成功访问服务器了。
 
-如果输入命令 `hostname` ，服务器会输出名字 `aha`。
+如果输入命令 `hostname` ，服务器会输出节点名 `aha`。
 
 ## 上传下载文件
 
@@ -115,8 +121,6 @@ RaiDrive 使用第三方服务分发软件：
 在 ``4`` ，要选择映射的目标硬盘盘符，可以选择你喜欢的。
 
 在 ``5`` ，可以将路径映射为指定目录，如 `/home/you/shared` (将 you 替换为你的用户名)，更方便的访问指定目录。
-
-可以多次配置，每个配置映射到不同路径，便于快速访问多个目录。
 
 至此，可以方便的利用windows提供的用户界面操作服务器上的文件了。
 

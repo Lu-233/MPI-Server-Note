@@ -5,7 +5,7 @@
 ```{admonition} 注意
 :class: warning
 
-下文将从零开始运行一份Python代码，包括对GPU资源的申请。如果集群目前暂停服务或满载，可能无法完成。
+下文将从零开始运行一份Python代码，包括对GPU资源的申请。如果集群暂停服务或满载，可能无法完成。
 ```
 
 ## 背景
@@ -14,7 +14,7 @@
 
 如何分配使用呢？用Slurm。
 
-SLURM：一个集群管理和作业调度系统，被全球超算广泛采用。
+Slurm：一个集群管理和作业调度系统，被全球超算广泛采用。
 
 Job：任务，资源设置和程序，用于分配资源和运行。如：“Hi~ o(*￣▽￣*)ブ，Slurm！来两块显卡，跑这个代码。”
 
@@ -37,7 +37,7 @@ wget -O ~/shared/hello_python.py https://github.com/Lu-MPI/MPI-Server-Note/raw/m
 
 可以通过命令 `cat ~/shared/hello_slurm.sh` 查看文件内容
 
-可以通过命令 `cat ~/shared/hello_python.sh` 查看文件内容
+可以通过命令 `cat ~/shared/hello_python.py` 查看文件内容
 
 ### 运行代码
 
@@ -66,4 +66,6 @@ sbatch hello_slurm.sh
 - hello_slurm.sh 是启动脚本，可以通过修改它改变配置和要运行的文件
 - hello_python.py 是要运行的代码。
 
-更多信息可以阅读这俩文件，有注释。
+阅读这俩文件中的注释可以获得进一步的解释。
+
+更多信息请阅读 Slurm 的文档。

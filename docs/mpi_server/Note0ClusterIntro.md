@@ -2,10 +2,11 @@
 
 ![img:访客统计](https://visitor-badge.glitch.me/badge?page_id=lu.readthedocs.io.ServerNote.服务器集群简介)
 
-.. warning::
-  本文有时效性。请务必参阅 mpi-servers wiki 的集群简介： <https://github.com/gqqnbig/mpi-servers/wiki/集群简介>
+警告：本文有时效性。请务必参阅 shine-cluster wiki 的[集群简介]。
 
-  更多细节可以咨询管理员。
+作者最后一次巡查本文：2022.06.01。
+
+[集群简介]: https://github.com/gqqnbig/shine-cluster/wiki/集群简介
 
 ## 背景
 
@@ -38,7 +39,7 @@
 
 GPU 支持 Nvidia CUDA，可以数十倍的加速张量积算。
 
-大量的GPU是研究机器学习的必需品。Matlab也常用GPU加速运算。
+大量的GPU是进行机器学习研究的必需品。Matlab也常用GPU加速矩阵运算。
 
 极端情况下，如 A100 GPU 比 Xeon 6240 CPU 快 249 倍。参考： https://www.nvidia.com/en-us/data-center/a100/
 
@@ -48,11 +49,17 @@ GPU 支持 Nvidia CUDA，可以数十倍的加速张量积算。
 
 由于计算节点的空间有限，推荐将文件主要存放在 shared 文件夹。
 
+新的存储空间正在部署和测试，按照目前Issue中的讨论，未来将有两个新的存储空间可用（一个高可用空间小，一个低可用空间大）。
+
+高/低可用是指有服务器维护/故障/下线时，我们能否访问所有的存储数据。
+
 ### 节点列表：
 
 部分节点等待上线/维护中，请在Aha上通过 `sinfo` 命令实时检查可用节点。
 
 **Aha**：登录节点，存储节点。
+
+**Aloha**：登录节点。
 
 **Eureka**：计算节点，CPU 48核，Memory 128G，GPU 10个（RTX2080Ti，12G）
 
@@ -66,13 +73,14 @@ GPU 支持 Nvidia CUDA，可以数十倍的加速张量积算。
 
 **Dagobah**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-## 简介
+## 三句话简介
 
 **SSH**：
 
 > Secure Shell 可以安全的连接和使用另一个系统的 Shell， 常用于 Linux 。 
 
 > 外壳（Shell）是与内核（Kernel）相对的概念。
+
 > 用户通过外壳使用内核。具体的说，它是命令行（Command-line interface, CLI）或图形界面（Graphical user interface, GUI）。
 
 **Bash**：

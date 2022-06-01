@@ -2,9 +2,11 @@
 
 ## 机器学习环境相关
 
-配置科研机器学习环境，本质上是配置编程语言、机器学习框架安装和开发工具，通常还包括用于加速的 CUDA Toolkit 。
+配置科研用的机器学习环境，本质上是安装配置编程语言、机器学习框架和开发工具，通常还包括用于加速的 CUDA Toolkit 。
 
-具体方案推荐用 Conda 来安装 Python + PyTorch/TensorFlow + CUDA（这种组合最常用。 [参考资料](https://zhuanlan.zhihu.com/p/93563377) ）。
+比如常用的 Conda 装 Python + PyTorch/TensorFlow + CUDA
+
+目前，PyTorch在AI顶会的使用数量远超TensorFlow。
 
 因为 Conda 可以帮助管理软件环境，如果使用 pip，就需要手动选择CUDA版本、安装和配置，对新手来说效率低、容易出错。
 
@@ -16,7 +18,7 @@
 
 Python 容易学习、编码和阅读。关注实现想法，而非编码细节。它有庞大的活跃的开源社区，提供了无数高效、便利的解决方案。
 
-虽然Python相对慢，但是可以使用C加速，计算瓶颈通常可以使用高性能计算库加速。
+虽然Python相对慢，计算瓶颈通常用基于C的高性能计算库加速。
 
 ### 为啥不用 Matlab
 
@@ -38,6 +40,8 @@ Python 容易学习、编码和阅读。关注实现想法，而非编码细节�
 [PapersWithCode]: https://paperswithcode.com/
 
 早几年，其他的框架还能插一嘴，但目前科研社区倾向 Pytorch。
+
+PyTorch已经成为AI顶会论文的首选框架（https://horace.io/pytorch-vs-tensorflow/）（https://thegradient.pub/state-of-ml-frameworks-2019-pytorch-dominates-research-tensorflow-dominates-industry/）。
 
 ### 为啥用 Conda
 
