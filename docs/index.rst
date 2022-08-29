@@ -22,6 +22,8 @@ Lu's Notebooks
 - Slurm 文档（V19.05.5）： https://slurm.schedmd.com/archive/slurm-19.05.5/
 
 
+要了解更多我写的内容，可以访问： https://wanglu.readthedocs.io/
+
 .. toctree::
    :maxdepth: 1
    :caption: Server Note:
