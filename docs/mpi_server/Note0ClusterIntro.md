@@ -4,7 +4,7 @@
 
 警告：本文有时效性。请务必参阅 shine-cluster wiki 的[集群简介]。
 
-作者最后一次巡查本文：2022.06.01。
+作者最后一次巡查本文：2022.09.01。
 
 [集群简介]: https://github.com/gqqnbig/shine-cluster/wiki/集群简介
 
@@ -24,11 +24,13 @@
 
 ### 登录节点
 
+目前的登录节点是 **aha** 和 **aloha**。
+
 用户只能通过 [SSH] 访问集群的登录节点，并提交计算任务。
 
 多个任务会按照优先队列等待分配资源并执行。
 
- [Slurm] 用于管理集群的任务调度、资源分配。
+[Slurm] 用于管理集群的任务调度、资源分配。
 
 [SSH]: https://en.wikipedia.org/wiki/Secure_Shell
 [Slurm]: https://slurm.schedmd.com/documentation.html
@@ -57,23 +59,28 @@ GPU 支持 Nvidia CUDA，可以数十倍的加速张量积算。
 
 部分节点等待上线/维护中，请在Aha上通过 `sinfo` 命令实时检查可用节点。
 
-**Aha**：登录节点，存储节点。
+**Aha**：登录节点，存储节点。 CPU 64核，Memory 256G
 
 **Aloha**：登录节点。
 
-**Eureka**：计算节点，CPU 48核，Memory 128G，GPU 10个（RTX2080Ti，12G）
-
 **Tatooine**：计算节点，CPU 20核，Memory 128G，GPU 4个（RTX3070，8G）
-
-**Coruscant**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
-
-**Synology**：存储节点。
-
-**Naboo**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
 **Dagobah**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
 
-## 三句话简介
+**Hoth**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+
+以下节点维护中：
+
+**Eureka**：计算节点，CPU 48核，Memory 128G，GPU 10个（RTX2080Ti，12G）
+
+**Coruscant**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+
+**Synology?**：存储节点。
+
+**Naboo?**：计算节点，CPU 64核，Memory 256G，GPU 8个（Quadro RTX 8000，48G）
+
+
+## 概念简介
 
 **SSH**：
 
