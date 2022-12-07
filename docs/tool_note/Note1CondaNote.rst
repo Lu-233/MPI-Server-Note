@@ -23,6 +23,15 @@ Wiki：https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)
 
 Miniconda is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages, including pip, zlib and a few others.
 
+
+在PyCharm中使用Conda
+----------------------
+
+新版本的PyCharm支持使用Conda作为包管理器。
+
+因此，可以在PyCharm的Python软件包相关页面使用GUI管理包了。
+
+
 基础命令
 -----------
 
